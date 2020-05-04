@@ -10,7 +10,7 @@
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
-
+                flex-direction: column;
             }
         </style>
         
@@ -19,17 +19,49 @@
     </head>
 
     <body>
-        <button id="btncounter">+</button>
+        <h1 id="headingTotal"></h1>
         <input id="inputamount"type="text"></input>
+        <button id="btnaddexpense">+</button>
+   
 
         <script>
-            let counter = 0;
-            function counterIncrement() {
-                counter =counter + 1;
-                console.log(counter);
+
+            //get the heading element
+            const headingEl = document.querySelector("#headingTotal");
+
+            //set the headng element to totalExpense
+            //init vaue of expense at 0
+            let totalExpense=0;
+            headingEl.textContent =  totalExpense;
+
+
+                        //onbuttonclick add inputamount to total
+
+            function addExpenseToTotal(){
+
+                
+                //read value from inputamount
+                const inputElement = document.querySelector("#inputAmount");
+                const textAmount = inputElement.value;
+                console.log({ textAmount });    
+
+
+                //convert it to number
+                const expense = parseInt(textAmount, 10)
+                // add that value to totalexpense
+
+                totalExpense = totalExpense + expense;
+                headingEl.textContent =  totalExpense;
+
             }
-            const element = document.querySelector("#btncounter");
-            element.addEventListener("click",counterIncrement, false);
+
+            // read value  from input
+
+
+            // let expense = 0;
+           
+            const element = document.querySelector("#btnaddexpense");
+            element.addEventListener("click",addExpenseToTotal, false);
    
         </script>
         
