@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title> web app</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="theme-color" content="#f5f5dc" />
+        
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+
+            }
+        </style>
+        
+        <!-- <link href="css/main.css" rel="stylesheet">  -->
+        
+    </head>
+
+    <body>
+        <button id="btncounter">+</button>
+        <input id="inputamount"type="text"></input>
+
+        <script>
+            let counter = 0;
+            function counterIncrement() {
+                counter =counter + 1;
+                console.log(counter);
+            }
+            const element = document.querySelector("#btncounter");
+            element.addEventListener("click",counterIncrement, false);
+   
+        </script>
+        
+        
+        
+        
+        
+        <header class ="site-header">
+            <img class="profile-pic" src="https://media-exp1.licdn.com/dms/image/C5103AQHtXZtUeHmeZA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=iZVSRb3nUG39jlflnPo8le4slgQRLvOIKtVPX-cHeaM">
+            <div class="site-header-text">
+                <h1>Hi hello</h1>
+                <h3>small <a class="profile" href="https://www.linkedin.com/in/himankmaan/">hello</a></h3>
+            </div>
+        </header>
+    </body>
+    
+</html>
